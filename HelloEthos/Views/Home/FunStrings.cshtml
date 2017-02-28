@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FunStrings</title>
+    <link href="https://fonts.googleapis.com/css?family=Antic+Slab" rel="stylesheet">
+    @Styles.Render("~/Content/myfonts")
+    @Styles.Render("~/Content/actioncss")
+</head>
+<body>
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+    <div class="centered-div">
+        <div class="card card--medium">
+            <h1 class="card__title">Fun With Strings!</h1>
+            <p class="card__text">not just for cats :)</p>
+
+            <form method="post" action="@Url.Action("PlayStrings", "Home")">
+                @Html.ValidationSummary()
+                @Html.TextArea("stringToChange", null, new { @data_val = "true", @data_val_required = "Input is required" })
+                <br />
+
+                <div class="card__action-bar">
+                    <input class="card__button" type="submit" name="PlayStrings" value="Submit" />
+                    @Html.ActionLink("Home", "Index", "Home")
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>

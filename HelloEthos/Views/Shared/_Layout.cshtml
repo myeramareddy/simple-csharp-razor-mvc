@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HelloEthos</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Antic+Slab" rel="stylesheet">
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/bootstrapcss")
+    @Styles.Render("~/Content/homepagecss")
+</head>
+
+<body>
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container">
+
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand">Manisha Yeramareddy</h3>
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <li>@Html.ActionLink("Fun With Strings", "FunStrings", "Home")</li>
+                                <li>@Html.ActionLink("Loan Amoritization", "GetLoanInputs", "Loan")</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="card card--medium center-text">
+                    <div class="inner cover">
+                        <h1 class="cover-heading card__title">Hello Ethos Lending!</h1>
+                        <p class="lead card__text">A java-n trying to build C# MVC application - Resources that I found really helpful</p>
+                        <p class="lead">
+                                <p><a href="https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/nerddinner/create-a-new-aspnet-mvc-project" target="_blank">Starter</a></p>
+                                <p><a href="https://msdn.microsoft.com/en-us/library/ff926074.aspx" target="_blank">Coding standards</a></p>
+                                <p><a href="https://msdn.microsoft.com/en-us/library/dd410405(v=VS.90).aspx" target="_blank">Good for basic layout</a></p>
+                                <p><a href="http://stackoverflow.com/questions/20333021/asp-net-mvc-how-to-pass-data-from-view-to-controller" target="_blank">Moving data from view to controller (most useful)</a></p>
+                                <p><a href="http://stackoverflow.com/questions/30839330/how-to-add-validators-for-html-textbox-without-model" target="_blank">Input validation without model</a></p>
+                                <p><a href="http://www.obviex.com/samples/hash.aspx" target="_blank">SHA-384</a></p>
+
+                        </p>
+                    </div>
+
+                    <div>
+                        @RenderSection("featured", required: false)
+                        <section class="content-wrapper main-content clear-fix">
+                            @RenderBody()
+                        </section>
+                    </div>
+                </div>
+
+                
+
+                <div class="mastfoot">
+                    <div class="inner">
+                        <p>by <a href="http://maniwhy.com/" target="_blank">mani</a>.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

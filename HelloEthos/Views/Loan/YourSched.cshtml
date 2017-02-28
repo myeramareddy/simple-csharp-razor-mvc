@@ -1,0 +1,66 @@
+﻿@model IEnumerable<HelloEthos.Models.LoanSchedModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Loan Schedule</title>
+    <link href="https://fonts.googleapis.com/css?family=Antic+Slab" rel="stylesheet">
+    @Styles.Render("~/Content/bootstrapcss")
+    @Styles.Render("~/Content/actioncss")
+</head>
+<body>
+    <p class="text-center">
+        @Html.ActionLink("Change Terms", "GetLoanInputs","Loan")
+    </p>
+    <p class="container well text-center">
+        @ViewBag.message
+    </p>
+
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.month)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.monthlyPayment)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.interestPaid)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.principalpaid)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.newBalance)
+            </th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.month)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.monthlyPayment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.interestPaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.principalpaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.newBalance)
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

@@ -1,0 +1,208 @@
+﻿/*http://materialdesignblog.com/10-material-design-cards-for-web-in-css-html/*/
+
+.centered-div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 50%;
+  height: 70%;
+}
+
+/*#c1, #c2, #c3 {
+    width: 33%;
+}*/
+
+table
+{ 
+    width: auto;
+}
+
+textarea
+{
+      width: 80%;
+  min-height: 300px;
+ grid-rows:"7";
+}
+
+body {
+	font-family: 'Antic Slab', 'Lato', serif;
+  background-color:#52B3A5;
+  background-size: cover; 
+}
+
+.shdw-for-img {
+  box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3), 0 11px 7px 0 rgba(0, 0, 0, 0.19);
+}
+
+.center-text {
+  text-align: center;
+}
+
+.min-joke {
+  color: #fff;
+  font-size: 15px;
+}
+
+a {
+  padding: 10px;
+  font-size: 20px;
+  color: #000;
+}
+
+/*a:link {
+  color: #fff;
+}
+a:visited {
+  color: #fff;
+}
+a:hover {
+  color: #fff;
+}*/
+
+.footer-div {
+    font-size: 10px;
+    height: 20px;
+    margin-left: 5px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+.card {
+  will-change: transform;
+  margin: 8px;
+  position: relative;
+  border-radius: 2px;
+  overflow: auto;
+  background-color: #fafafa;
+  min-width: 300px;
+  -webkit-transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+}
+.card:hover {
+  cursor: pointer;
+}
+
+
+.card__title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 24px;
+  color: #FFF;
+  margin: 0;
+  /*position: absolute;*/
+  left: 0;
+  right: 0;
+  padding: 10px;
+  font-weight: 400;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.card__subtitle {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 14px;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #000;
+  left: 88px;
+  right: 0;
+  top: 45px;
+  position: absolute;
+  padding: 0 16px;
+  opacity: 0;
+  -webkit-transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.card__text {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 14px;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 100px;
+  padding: 5px;
+  margin: 0;
+  line-height: 1.6;
+  /*position: absolute;*/
+  color: #000;
+  overflow: hidden;
+  -webkit-transition: width 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: width 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: delay 0.1s;
+  transition: delay 0.1s;
+}
+.card__action-bar {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  /*position: absolute;*/
+  bottom: 0;
+  top: auto;
+  left: 0;
+  right: 0;
+  padding: 0 8px;
+  border-top: 1px solid #E0E0E0;
+  boz-sizing: border-box;
+  height: 45px;
+  -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.card__button {
+  outline: none;
+  position: relative;
+  display: inline-block;
+  line-height: 52px;
+  padding: 0 16px;
+  color: #FF1744;
+}
+
+.card__button__small {
+  outline: none;
+  position: relative;
+  display: inline-block;
+  line-height: 45px;
+  padding: 0 15px;
+  color: #FF1744;
+  font-size: 15px;
+}
+
+.card--medium {
+  box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3), 0 11px 7px 0 rgba(0, 0, 0, 0.19);
+  min-height: 50px;
+}
+
+.card--medium .card__title {
+  color: #FF1744;
+  top: 16px;
+}
+.card--medium .card__text {
+  font-size: 16px;
+  top: 50px;
+}
+.card--medium .card__action-bar {
+  left: 0;
+}
+

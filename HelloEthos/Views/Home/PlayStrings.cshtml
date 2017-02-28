@@ -1,0 +1,74 @@
+﻿@model HelloEthos.Models.FunStringsModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PlayStrings</title>
+    @Styles.Render("~/Content/actioncss")
+</head>
+<body>
+    <div class="centered-div">
+
+        <div class="card card--medium">
+            <div class="card__action-bar">
+                <div class="card__button">
+                    @Html.ActionLink("Back", "FunStrings")
+                </div>
+            </div>
+        </div>
+
+        <div class="card card--medium">
+            <div class="card__title">
+                @Html.DisplayNameFor(model => model.input)
+            </div>
+            <div class="card__text">
+                @Html.DisplayFor(model => model.input)
+            </div>
+        </div>
+
+        <div class="card card--medium">
+            <div class="card__title">
+                @Html.DisplayNameFor(model => model.reverseWordOrder)
+            </div>
+            <div class="card__text">
+                @Html.DisplayFor(model => model.reverseWordOrder)
+            </div>
+        </div>
+
+        <div class="card card--medium">
+            <div class="card__title">
+                @Html.DisplayNameFor(model => model.reverseCharOrder_w_wordOrder)
+            </div>
+            <div class="card__text">
+                @Html.DisplayFor(model => model.reverseCharOrder_w_wordOrder)
+            </div>
+        </div>
+
+        <div class="card card--medium">
+            <div class="card__title">
+                @Html.DisplayNameFor(model => model.alphaSortWords)
+            </div>
+            <div class="card__text">
+                @Html.DisplayFor(model => model.alphaSortWords)
+            </div>
+        </div>
+
+        <div class="card card--medium">
+            <div class="card__title">
+                @Html.DisplayNameFor(model => model.sha384Encrypt)
+            </div>
+            <div class="card__text">
+                @Html.DisplayFor(model => model.sha384Encrypt)
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

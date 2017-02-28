@@ -1,0 +1,66 @@
+﻿@model HelloEthos.Models.LoanTermModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetLoanInputs</title>
+    <link href="https://fonts.googleapis.com/css?family=Antic+Slab" rel="stylesheet">
+    @Styles.Render("~/Content/actioncss")
+</head>
+<body>
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+    <div class="centered-div">
+        <div class="card card--medium">
+            @using (Html.BeginForm("YourSched", "Loan"))
+            {
+                @Html.ValidationSummary(true)
+
+                <fieldset>
+                    <legend>Loan Terms</legend>
+    
+                    <div class="card__title">
+                        @Html.LabelFor(model => model.amount)
+                    </div>
+                    <div class="card__text">
+                        @Html.EditorFor(model => model.amount)
+                        @Html.ValidationMessageFor(model => model.amount)
+                    </div>
+    
+                    <div class="card__title">
+                        @Html.LabelFor(model => model.annualInterestRate)
+                    </div>
+                    <div class="card__text">
+                        @Html.EditorFor(model => model.annualInterestRate)
+                        @Html.ValidationMessageFor(model => model.annualInterestRate)
+                    </div>
+    
+                    <div class="card__title">
+                        @Html.LabelFor(model => model.numOfMonths)
+                    </div>
+                    <div class="card__text">
+                        @Html.EditorFor(model => model.numOfMonths)
+                        @Html.ValidationMessageFor(model => model.numOfMonths)
+                    </div>
+
+                    <div class="card__action-bar">
+                        <input class="card__button__small" type="submit" value="Calculate"/>
+                        @Html.ActionLink("Home", "Index", "Home")
+	                </div>
+    
+                </fieldset>
+            }
+        </div>
+    </div>
+
+</body>
+</html>
